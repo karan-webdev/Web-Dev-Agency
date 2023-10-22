@@ -525,12 +525,13 @@ footer p {
     font-size: 25px;
     margin: 10px 0;
     letter-spacing: 1px !important;
+    color: var(--primary-bg-color);
 }
 
 .fas.fa-copyright {
     position: relative;
     top: 5px;
-    color: #555;
+    color: var(--primary-bg-color);
 }
   
 
