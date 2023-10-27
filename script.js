@@ -30,11 +30,7 @@ const animateOnScroll = () => {
     });
 };
 
-// Listen for the scroll event and trigger animations
-window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', animateOnScroll); // Trigger animations on page load
 
-
-
+  
 
 

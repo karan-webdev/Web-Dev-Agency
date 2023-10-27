@@ -14,8 +14,7 @@
 }
 
 html, body {
-    overflow-x: hidden;
-    background-color: var(--primary-bg-color);
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -47,20 +46,12 @@ html, body {
     }
 }
 
-#progressIndicator {
-    position: fixed;
-    top: -80px;
-    left: -80px;
-    transform: translate(-50%, -50%) rotate(-90deg);
-}
-
 .navbar {
     background-color: var(--primary-bg-color);
     padding: 15px;
-    padding-right: 50px;
-    padding-left: 50px; 
-    box-shadow: 0px -2px 0px 0px white !important; 
+    padding-inline: 50px;
 }
+
 
 .navbar-brand {
     font-weight: bold;
@@ -144,15 +135,18 @@ svg.social:nth-of-type(3) {
 }
 
 
+
 /* Home page */
 
   .home {
     display: flex;
-    justify-content: center; 
+    justify-content:space-evenly; 
     align-items: center; 
     height: 100vh;
+    height: 100svh;
     text-align: left; 
     flex-direction: column;
+    background-color: var(--primary-bg-color);
 }
 
 
@@ -160,6 +154,10 @@ svg.social:nth-of-type(3) {
     height: 55vh;
     
     background-color: var(--navbar-text-color);
+}
+
+.wave {
+    background-color: var(--primary-bg-color);
 }
 
 .about h2 {
@@ -208,7 +206,9 @@ svg.social:nth-of-type(3) {
 }
 
 .contact {
+    background-color: var(--primary-bg-color);
     height: 100vh;
+    height: 100svh;
 }
 
 
@@ -218,16 +218,13 @@ svg.social:nth-of-type(3) {
     font-size: 24px;
   }
 
+
 h1 {
     color: white;
     max-width: 1000px;
     font-size: 75px;
     line-height: 90px;
-    margin: 0; 
-    padding-bottom: 30px;
     position: relative;
-    bottom: 10vh;
-    
 }
 
 .highlight {
@@ -239,7 +236,6 @@ h1 {
 }
 
 .l-but {
-    position: relative;
     padding: 20px 50px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -533,10 +529,124 @@ footer p {
     top: 5px;
     color: var(--primary-bg-color);
 }
-  
 
 footer ul,
 footer h4,
 footer p {
     margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .navbar {
+        background-color: var(--primary-bg-color);
+        padding-inline: 30px;
+        box-shadow: 0px -2px 0px 0px white !important; 
+    }
+    
+    
+    nav li a {
+        margin: 0 !important;
+      }
+      
+    nav li  a::before {
+        background: none;  
+      }
+      
+    
+    svg.social {
+        z-index: 999;
+        height: 50px;
+        right: 20px;   
+    }
+    
+    svg.social:nth-of-type(1) {
+        right: 70px;
+    }
+    
+    svg.social:nth-of-type(3) {
+        right: 120px;
+    }
+    
+    
+    /* Home page */
+    
+    
+    .about {
+        height: 55vh;
+        background-color: var(--navbar-text-color);
+    }
+    
+    .about h2 {
+        color: var(--primary-bg-color);
+        text-align: center;
+    
+      
+        font-size: 75px;
+        margin: 0; 
+     
+        position: relative;
+        bottom: 15vh;
+    }
+    
+    .about p {
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        margin-left: 24vw;
+        max-width: 800px;
+        font-size: 20px;
+        position: relative;
+        letter-spacing: 2px;
+        bottom: 13vh;
+        background-color: var(--primary-bg-color);
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    
+    .about p:nth-of-type(1) {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .about p:nth-of-type(2) {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    
+    
+    
+    
+    
+    .services {
+        height: 100vh;
+    }
+    
+    .contact {
+        height: 100vh;
+    }
+    
+    
+    .social-icons a {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+      }
+    
+    h1 {
+        color: white;
+        font-size: 40px;
+        line-height: 50px; 
+    }
+    
+    .highlight {
+        color: var(--navbar-text-color);
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    
 }
