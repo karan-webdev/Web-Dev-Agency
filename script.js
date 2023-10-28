@@ -19,18 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (rect.top < windowHeight) {
-            element.classList.add('visible');
-        }
-    });
-};
 
-
+  
+  
+  
+  
   
 
 

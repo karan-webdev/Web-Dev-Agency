@@ -16,6 +16,8 @@
 html, body {
     width: 100%;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 ::-webkit-scrollbar {
@@ -144,17 +146,11 @@ svg.social:nth-of-type(3) {
     align-items: center; 
     height: 100vh;
     height: 100svh;
-    text-align: left; 
+    text-align: center; 
     flex-direction: column;
     background-color: var(--primary-bg-color);
 }
 
-
-.about {
-    height: 55vh;
-    
-    background-color: var(--navbar-text-color);
-}
 
 .wave {
     background-color: var(--primary-bg-color);
@@ -203,6 +199,7 @@ svg.social:nth-of-type(3) {
 
 .services {
     height: 100vh;
+    height: 100svh;
 }
 
 .contact {
@@ -311,7 +308,6 @@ h1 {
   /* services */
   .services {
     background-color: #f7f7f7;
-    text-align: center;
     text-align: center;
 }
 
@@ -496,6 +492,13 @@ footer li {
     margin-right: 15px;
 }
 
+   
+.about {
+    height: 55vh;
+    background-color: var(--navbar-text-color);
+}
+
+
 footer a {
     text-decoration: none;
     color: #ffffff;
@@ -536,6 +539,8 @@ footer p {
     margin: 10px 0;
 }
 
+
+
 @media (max-width: 768px) {
     ::-webkit-scrollbar {
         display: none;
@@ -546,6 +551,11 @@ footer p {
         padding-inline: 30px;
         box-shadow: 0px -2px 0px 0px white !important; 
     }
+
+    body {
+        background-color: var(--navbar-text-color);
+    }
+
     
     
     nav li a {
@@ -576,32 +586,31 @@ footer p {
     
     
     .about {
-        height: 55vh;
+        height: fit-content;
         background-color: var(--navbar-text-color);
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-top: -1px;
     }
     
     .about h2 {
         color: var(--primary-bg-color);
-        text-align: center;
-    
-      
-        font-size: 75px;
-        margin: 0; 
-     
-        position: relative;
-        bottom: 15vh;
+        bottom: 5vh;
+        
+        font-size: 45px;
     }
     
     .about p {
+        left: -50%;
+        transform: translateX(50%);
         border-radius: 15px;
         color: white;
+        bottom: 5vh;
         text-align: center;
-        margin-left: 24vw;
-        max-width: 800px;
-        font-size: 20px;
+        font-size: 16px;
         position: relative;
         letter-spacing: 2px;
-        bottom: 13vh;
         background-color: var(--primary-bg-color);
         padding: 20px;
         margin-bottom: 0;
@@ -622,11 +631,16 @@ footer p {
     
     
     .services {
-        height: 100vh;
+        height: fit-content;
+    }
+
+    .service:last-of-type {
+        margin-bottom: 10vh;
     }
     
     .contact {
-        height: 100vh;
+        height: fit-content;
+        padding-block: 10vh;
     }
     
     
@@ -640,6 +654,7 @@ footer p {
         color: white;
         font-size: 40px;
         line-height: 50px; 
+        max-width: 400px;
     }
     
     .highlight {
@@ -648,5 +663,79 @@ footer p {
         line-height: 50px;
     }
     
+
+
+    footer {
+        height: fit-content;
+        background-color: var(--navbar-text-color);
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+        top: -1px;
+        padding-top: 10px;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
     
+    
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: auto;
+        position: relative;
+        z-index: 500;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10vh;
+        margin-top: 15vh;
+    }
+
+    footer  a::before {
+        background: none;  
+      }
+    
+    footer a {
+        display: inline;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        letter-spacing: 2px;
+        position: relative;
+      }
+      
+    
+       
+    
+    footer a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    
+    footer a:hover {
+        color: #dcdcdc;
+        text-decoration: none;
+    }
+    
+    footer h4 {
+        font-size: 20px;
+        position: relative;
+        left: 0;
+    }
+    
+    footer p {
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px !important;
+        color: var(--primary-bg-color);
+    }
+    
+    .fas.fa-copyright {
+        color: var(--primary-bg-color);
+    }
 }
