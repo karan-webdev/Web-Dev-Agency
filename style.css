@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap');
 
 :root {
-    --primary-bg-color: #131217;
-    --navbar-text-color: #21ab89;
+    --primary-bg-color: #171212;
+    --navbar-text-color: #22a8d5;
+    --navbar-accent-color: #1580a3;
     --font-size: 20px;
 }
 
@@ -20,6 +21,10 @@ html, body {
     padding: 0;
 }
 
+body {
+    background-color: var(--primary-bg-color);
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -34,7 +39,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #169676;
+    background: var(--navbar-accent-color);
 }
 
 
@@ -152,35 +157,27 @@ svg.social:nth-of-type(3) {
 }
 
 
-.wave {
-    background-color: var(--primary-bg-color);
-}
+
 
 .about h2 {
     color: var(--primary-bg-color);
     text-align: center;
-
-  
     font-size: 75px;
-    margin: 0; 
- 
     position: relative;
-    bottom: 15vh;
 }
 
 .about p {
     border-radius: 15px;
     color: white;
     text-align: center;
-    margin-left: 24vw;
+    transform: translate(-50%);
+    left: 50%;
     max-width: 800px;
     font-size: 20px;
     position: relative;
     letter-spacing: 2px;
-    bottom: 13vh;
-    background-color: var(--primary-bg-color);
     padding: 20px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .about p:nth-of-type(1) {
@@ -307,7 +304,7 @@ h1 {
   }
   /* services */
   .services {
-    background-color: #f7f7f7;
+    background: white;
     text-align: center;
 }
 
@@ -328,14 +325,18 @@ h1 {
 }
 
 .service:hover {
-  transform:scale(1.05);
-}
+    transform: scale(1.05) rotate(3deg);
+  }
+  
 
 
 i {
     font-size: 40px;
     color: var(--navbar-text-color);
+    position: relative;
 }
+
+
 
 h3 {
     font-size: 24px;
@@ -357,6 +358,7 @@ p .highlight {
     text-transform: none;
     font-weight: bolder !important;
     font: inherit;
+    color: var(--primary-bg-color);
 }
 
   /* contact us */
@@ -367,6 +369,7 @@ p .highlight {
     text-align: left;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin: 0 auto;
     padding: 20px;
@@ -380,6 +383,7 @@ p .highlight {
 }
 
 .form-group {
+    width: 100%;
     margin: 10px 0;
     text-align: left;
 }
@@ -409,32 +413,20 @@ textarea {
     resize: none;
     border: 3px solid var(--navbar-text-color);
     border-radius: 5px;
+    margin-bottom: 20%;
 }
 
-button[type="submit"] {
-    background: #21ab89;
-    color: white;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
 
-button[type="submit"]:hover {
-    background: #169676;
-}
 
 /* footer */
 footer {
-    height: 20vh;
-    background-color: var(--navbar-text-color);
+    height: fit-content;
+    background: var(--navbar-text-color);
     text-align: center;
     color: #ffffff;
-    padding-top: 10px;
-    padding-bottom: 15vw;
+    margin-top: 10vh;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
     letter-spacing: 2px;
 }
 
@@ -442,10 +434,9 @@ footer {
 footer ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 50px;
+    top: 3vh;
     position: relative;
     right: 20vw;
-    bottom: 5vh;
     z-index: 500;
 }
 
@@ -494,8 +485,9 @@ footer li {
 
    
 .about {
-    height: 55vh;
-    background-color: var(--navbar-text-color);
+    height: fit-content;
+    padding-block: 2em;
+    background: var(--navbar-text-color)
 }
 
 
@@ -516,7 +508,7 @@ footer h4 {
     margin: 5px 0;
     position: relative;
     left: 25vw;
-    bottom: 12vh;
+    bottom: 5vh;
 }
 
 footer p {
@@ -591,13 +583,10 @@ footer p {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
-        margin-top: -1px;
     }
     
     .about h2 {
         color: var(--primary-bg-color);
-        bottom: 5vh;
-        
         font-size: 45px;
     }
     
@@ -606,7 +595,6 @@ footer p {
         transform: translateX(50%);
         border-radius: 15px;
         color: white;
-        bottom: 5vh;
         text-align: center;
         font-size: 16px;
         position: relative;
@@ -637,6 +625,8 @@ footer p {
     .service:last-of-type {
         margin-bottom: 10vh;
     }
+
+
     
     .contact {
         height: fit-content;
