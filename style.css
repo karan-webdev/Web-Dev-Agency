@@ -207,7 +207,7 @@ nav li  a:hover::before {
 
 .services {
     height: fit-content;
-    padding-bottom: 20vh;
+    padding-bottom: 15vh;
 }
 
 .contact {
@@ -455,7 +455,6 @@ footer {
     background: linear-gradient(to right, #22a8d5, #7c1ebb);
     text-align: center;
     color: var(--primary-bg-color);
-    margin-top: 10vh;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -644,13 +643,17 @@ footer p {
         height: fit-content;
     }
 
+    .services {
+        height: fit-content;
+        padding-bottom: 10vh;
+    }
+
     .service {
         width: 350px;
     }
     
     .contact {
         height: fit-content;
-        padding-block: 10vh;
     }
     
     
@@ -669,7 +672,9 @@ footer p {
         line-height: 50px;
     }
     
-    
+    footer {
+        margin-top: 0vh;
+    }
  
 
     footer  a::before {
