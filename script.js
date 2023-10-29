@@ -12,24 +12,20 @@ const serviceElements = document.querySelectorAll('.service');
     });
   });
 
-// Scroll to top button
-function scrollToTop() {
-    window.scrollTo({
-      top: -window.innerHeight,
-      behavior: 'smooth'
-    });
+// scroll to top button
+  function scrollToTop() {
+    window.scrollTo({ top: -1000, behavior: 'smooth' });
   }
-  
-  window.onscroll = function () {
+
+  window.onscroll = function() {
     const backButton = document.getElementById("back-to-top");
-    if (document.body.scrollTop > 20 + window.innerHeight || document.documentElement.scrollTop > 20 + window.innerHeight) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       backButton.style.display = "block";
-      backButton.style.opacity = 1;
+      backButton.style.opacity = 1; 
     } else {
-      backButton.style.opacity = 0;
+      backButton.style.opacity = 0; 
     }
   };
-  
 
   
   
