@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Roboto:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Roboto:wght@500&family=Urbanist:wght@500&display=swap');
 
 
 :root {
@@ -227,6 +227,10 @@ h1 {
     position: relative;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Urbanist', sans-serif;
+}
+
 .highlight {
     color: var(--navbar-text-color);
     text-align: left;
@@ -450,18 +454,20 @@ footer {
     text-align: center;
     color: var(--primary-bg-color);
     margin-top: 10vh;
-    padding-top: 10vh;
-    padding-bottom: 5vh;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    padding-block: 10px;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 
 footer ul {
     list-style: none;
     padding: 0;
-    top: 3vh;
+    display: inline;
     position: relative;
-    right: 20vw;
     z-index: 500;
 }
 
@@ -480,13 +486,11 @@ footer a {
     margin-left: 50px;
     font-size: 25px;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 10px;
   }
   
 footer  a::before {
     content: '';
     background:  var(--primary-bg-color);
-    display: block;
     position: absolute;
     bottom: -3px;
     left: 0;
@@ -530,10 +534,7 @@ footer a:hover {
 
 footer h4 {
     font-size: 35px;
-    margin: 5px 0;
     position: relative;
-    left: 25vw;
-    bottom: 5vh;
 }
 
 footer p {
@@ -546,14 +547,14 @@ footer p {
 
 .fas.fa-copyright {
     position: relative;
-    top: 5px;
+    top: 0;
     color: var(--primary-bg-color);
 }
 
 footer ul,
 footer h4,
 footer p {
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 
@@ -562,6 +563,10 @@ footer p {
     ::-webkit-scrollbar {
         display: none;
     }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
     
     .navbar {
         background-color: var(--primary-bg-color);
@@ -569,11 +574,9 @@ footer p {
         box-shadow: 0px -2px 0px 0px white !important; 
     }
 
-    body {
-        background-color: var(--navbar-text-color);
+    .l-but {
+        bottom: 20%;
     }
-
-    
     
     nav li a {
         margin: 0 !important;
@@ -610,7 +613,6 @@ footer p {
         font-size: 16px;
         position: relative;
         letter-spacing: 2px;
-        background-color: var(--primary-bg-color);
         padding: 20px;
         margin-bottom: 0;
     }
@@ -625,6 +627,13 @@ footer p {
         border-top-right-radius: 0px;
     }
     
+    .container {
+        width: 350px;
+    }
+
+    textarea {
+        margin-bottom: 35%;
+    }
     
     
     
@@ -635,6 +644,10 @@ footer p {
 
     .service:last-of-type {
         margin-bottom: 10vh;
+    }
+
+    .service {
+        width: 350px;
     }
 
 
@@ -660,36 +673,8 @@ footer p {
         line-height: 50px;
     }
     
-
-
-    footer {
-        height: fit-content;
-        background-color: var(--navbar-text-color);
-        text-align: center;
-        color: #ffffff;
-        position: relative;
-        top: -1px;
-        padding-top: 10px;
-        letter-spacing: 2px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
     
-    
-    footer ul {
-        list-style: none;
-        padding: 0;
-        margin: auto;
-        position: relative;
-        z-index: 500;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 10vh;
-        margin-top: 15vh;
-    }
+ 
 
     footer  a::before {
         background: none;  
@@ -698,7 +683,6 @@ footer p {
     footer a {
         display: inline;
         text-decoration: none;
-        color: #ffffff;
         font-weight: bold;
         letter-spacing: 2px;
         position: relative;
@@ -709,13 +693,11 @@ footer p {
     
     footer a {
         text-decoration: none;
-        color: #ffffff;
         font-weight: bold;
         transition: color 0.3s;
     }
     
     footer a:hover {
-        color: #dcdcdc;
         text-decoration: none;
     }
     
@@ -734,5 +716,6 @@ footer p {
     
     .fas.fa-copyright {
         color: var(--primary-bg-color);
+        font-size: 20px;
     }
 }
