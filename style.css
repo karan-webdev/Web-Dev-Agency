@@ -642,15 +642,9 @@ footer p {
         height: fit-content;
     }
 
-    .service:last-of-type {
-        margin-bottom: 10vh;
-    }
-
     .service {
         width: 350px;
     }
-
-
     
     .contact {
         height: fit-content;
