@@ -448,6 +448,8 @@ textarea {
 
 /* footer */
 footer {
+    position: relative;
+    bottom: 0;
     height: fit-content;
     font-family: 'Noto Sans', sans-serif;
     background: linear-gradient(to right, #22a8d5, #7c1ebb);
