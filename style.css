@@ -206,14 +206,13 @@ nav li  a:hover::before {
 
 
 .services {
-    height: 100vh;
-    height: 100svh;
+    height: fit-content;
+    padding-bottom: 20vh;
 }
 
 .contact {
     background-color: var(--primary-bg-color);
-    height: 100vh;
-    height: 100svh;
+    height: fit-content;
 }
 
 
