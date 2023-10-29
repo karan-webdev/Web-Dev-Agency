@@ -12,10 +12,7 @@ const serviceElements = document.querySelectorAll('.service');
     });
   });
 
-// scroll to top button
-  function scrollToTop() {
-    window.scrollTo({ top: -1000, behavior: 'smooth' });
-  }
+
 
   window.onscroll = function() {
     const backButton = document.getElementById("back-to-top");
