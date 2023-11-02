@@ -349,14 +349,14 @@ h2 {
     display: inline-block;
     background-color: var(--primary-bg-color);
     border-radius: 5px;
-    border: 1px solid var(--navbar-text-color);
+    border: 3px solid var(--navbar-text-color);
     transition: transform 0.2s;
 }
 
   
 
 
-i {
+.service i {
     font-size: 40px;
     background: linear-gradient(to right, #22a8d5, #7c1ebb);
       -webkit-background-clip: text;
@@ -389,6 +389,8 @@ p .highlight {
     font: inherit;
     color: var(--primary-bg-color);
 }
+
+
 
   /* contact us */
   .container {
@@ -720,3 +722,81 @@ footer p {
         font-size: 20px;
     }
 }
+
+
+.snip1533 {
+  all: initial;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--navbar-text-color);
+  display: inline-block;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  transition: transform 0.2s;
+  border-radius: 5px;
+}
+
+.testimonials {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+
+.stars {
+      color:#7c1ebb;
+    }
+
+.snip1533 *,
+.snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #22a8d5, #7c1ebb);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: var(--primary-bg-color);
+  content: "\f10e";
+  font-family: 'FontAwesome';
+  font-size: 32px;
+  font-style: normal;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+  text-align: center;
+}
+
+.snip1533 h3 {
+  color: var(--navbar-text-color);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 50px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+.snip1533 blockquote {
+  font-weight: 300;
+  margin: 0 0 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+

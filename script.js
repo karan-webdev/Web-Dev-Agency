@@ -12,6 +12,21 @@ const serviceElements = document.querySelectorAll('.service');
     });
   });
 
+  const testomonial = document.querySelectorAll('.snip1533');
+
+  testomonial.forEach((element) => {
+    element.addEventListener('mouseover', () => {
+      const randomRotation = (Math.random() * 2 - 1) * 3; // Generates a random number between -3 and 3
+      element.style.transform = `scale(1.05) rotate(${randomRotation}deg)`;
+    });
+
+    element.addEventListener('mouseout', () => {
+      element.style.transform = 'scale(1) rotate(0deg)';
+    });
+  });
+
+
+  
 
 
   window.onscroll = function() {
