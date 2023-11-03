@@ -740,7 +740,7 @@ footer p {
         border: 3px solid var(--navbar-text-color);
         text-align: left;
         padding: 4px;
-        font-size: 16px !important;
+        font-size: 15px !important;
     }
     
     .roww:hover {
@@ -751,7 +751,7 @@ footer p {
         background: linear-gradient(to bottom, #22a8d5, #7c1ebb);
         color: var(--primary-bg-color);
         font-weight: bold;
-        font-size: 20px !important;
+        font-size: 17px !important;
     }
 }
 
