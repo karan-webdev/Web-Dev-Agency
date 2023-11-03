@@ -4,7 +4,7 @@
 
 
 :root {
-    --primary-bg-color: #171212;
+    --primary-bg-color: rgb(19, 18, 23);
     --navbar-text-color: #22a8d5;
     --navbar-accent-color: #1580a3;
     --font-size: 20px;
@@ -721,6 +721,38 @@ footer p {
         color: var(--primary-bg-color);
         font-size: 20px;
     }
+
+    .projects-section {
+        text-align: center;
+    }
+    
+    .projects {
+        display: flex;
+        justify-content: center;
+    }
+    
+    table {
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        color: white;
+        border: 3px solid var(--navbar-text-color);
+        text-align: left;
+        padding: 4px;
+        font-size: 16px !important;
+    }
+    
+    .roww:hover {
+        opacity: 0.5;
+    }
+    
+    th {
+        background: linear-gradient(to bottom, #22a8d5, #7c1ebb);
+        color: var(--primary-bg-color);
+        font-weight: bold;
+        font-size: 20px !important;
+    }
 }
 
 
@@ -762,6 +794,8 @@ footer p {
   padding: 13% 10% 12%;
 }
 
+
+
 .snip1533 figcaption:before {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -797,6 +831,44 @@ footer p {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.projects-section {
+    text-align: center;
+    padding-block: 75px;
+    padding-bottom: 150px;
+}
 
+.projects {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+th, td {
+    color: white;
+    border: 3px solid var(--navbar-text-color);
+    text-align: left;
+    padding: 8px;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform:lowercase;
+}
+
+.roww:hover {
+    opacity: 0.5;
+}
+
+th {
+    background: linear-gradient(to bottom, #22a8d5, #7c1ebb);
+    color: var(--primary-bg-color);
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Urbanist', sans-serif;
+}
+
+  
 
 
