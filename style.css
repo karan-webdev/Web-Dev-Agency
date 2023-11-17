@@ -223,7 +223,29 @@ nav li  a:hover::before {
     font-size: 40px; 
   }
   
+  .cursor {
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
 
+
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
   
 
 
@@ -832,6 +854,10 @@ footer p {
         0% { opacity: 0; }
         10% { transform: translateY(0); opacity: 1; }
         100% { transform: translateY(15px); opacity: 0;}
+      }
+
+      .cursor {
+        display: none;
       }
 }
 
