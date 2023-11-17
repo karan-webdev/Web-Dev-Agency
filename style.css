@@ -49,6 +49,15 @@ body {
     color: white !important;
 }
 
+.erupt {
+    position: absolute;
+    height: 150px;
+    right: 0px;
+    margin-top: -100px;
+    color: #22a8d5;
+    opacity: 0.5;
+}
+
 
 
 
@@ -87,8 +96,7 @@ body {
     -webkit-animation-name: shimmer;
     -webkit-animation-duration: 3.2s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-background-size: 4rem 100%; /*50px*/
-  
+    -webkit-background-size: 4rem 100%; /*50px*/ 
 }
 
 @-webkit-keyframes shimmer {
