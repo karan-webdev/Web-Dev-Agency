@@ -12,10 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <body id="home">
 
+      <div class="scroll-downs">
+        <div class="mousey">
+          <div class="scroller"></div>
+        </div>
+      </div>
 
         
         
@@ -28,9 +36,6 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
@@ -42,8 +47,9 @@
                     </ul>
                 </div>
             </nav>
+            
             <div class="home">
-                <h1>Crafted Digital Solutions that <span class="highlight">Empower Your</span> Online <span class="highlight">Success</span></h1>
+                <h1>Crafted Digital Solutions that <span class="highlight">Enhance Your</span> Online <span class="highlight">Success</span></h1>
                 <a class="l-but" href="#services">
                     <span>services</span>
                     <div class="liquid"></div>
@@ -59,7 +65,7 @@
         <section>
             <div class='testimonials'>
                 <h2>happy clients</h2>
-                <figure class="snip1533">
+                <figure data-aos="flip-up" class="snip1533">
                   <figcaption>
                     <blockquote>
                       <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
@@ -70,12 +76,12 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </div>
                   </figcaption>
                 </figure>
                 
-                  <figure class="snip1533">
+                  <figure data-aos="flip-up" class="snip1533">
                   <figcaption>
                     <blockquote>
                       <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
@@ -86,14 +92,14 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </div>
                   </figcaption>
                 </figure>
                 
               
                 
-                <figure class="snip1533">
+                <figure data-aos="flip-up" class="snip1533">
                   <figcaption>
                     <blockquote>
                       <p>The only skills I have the patience to learn are those that have no real application in life. </p>
@@ -104,7 +110,7 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
+                      <i class="fas fa-star"></i>
                     </div>
                   </figcaption>
                 </figure>
@@ -123,86 +129,41 @@
         <div id="services" class="services">
             <div class="our-services">
                 <h2>Our Services</h2>
-                <div class="service">
+                <div data-aos="fade-down" class="service">
                     <i class="fas fa-laptop"></i>
                     <h3>Web Application</h3>
                     <p>We develop cutting-edge web applications tailored to your needs.</p>
                 </div>
-                <div class="service">
+                <div data-aos="fade-down" class="service">
                     <i class="fas fa-cogs"></i>
                     <h3>Highly Customizable</h3>
                     <p>Our solutions are highly customizable to suit your unique requirements.</p>
                 </div>
-                <div class="service">
+                <div data-aos="fade-down" class="service">
                     <i class="fas fa-mobile-alt"></i>
                     <h3>Responsive Design</h3>
                     <p>We ensure that your website or app looks great on all devices.</p>
                 </div>
-                <div class="service">
+                <div data-aos="fade-down" class="service">
                     <i class="fas fa-puzzle-piece"></i>
                     <h3>Service & Plugins</h3>
                     <p>We offer additional services and plugins to enhance your web experience.</p>
                 </div>
-                <div class="service">
+                <div data-aos="fade-down" class="service">
                     <i class="fas fa-server"></i>
                     <h3>Hosting</h3>
                     <p>Secure and reliable hosting services to keep your website running smoothly.</p>
                 </div>
-                <div class="service">
+                <div data-aos="fade-down" class="service">
                     <i class="fas fa-shopping-cart"></i>
                     <h3>E-commerce</h3>
                     <p>We provide e-commerce solutions to help you sell products effectively.</p>
                 </div>
             </div>
-        </div>    
-
-
-      <section class="projects-section">
-        <h2>Our Work</h2>
-        <div class="projects">
-          <table>
-            <tr>
-                <th>Projects</th>
-                <th>Description</th>
-                <th>Technologies</th>
-            </tr>
-            <tr class="roww" onclick="window.open('https://instagram.com', '_blank');">
-                <td>Project 1</td>
-                <td>A brief description of Project 1.</td>
-                <td>HTML, CSS, JavaScript</td>
-            </tr>
-            <tr class="roww" onclick="window.open('https://instagram.com', '_blank');">
-                <td>Project 2</td>
-                <td>A brief description of Project 2.</td>
-                <td>React, Node.js</td>
-            </tr>
-            <tr class="roww" onclick="window.open('https://instagram.com', '_blank');">
-              <td>Project 3</td>
-              <td>A brief description of Project 1.</td>
-              <td>HTML, CSS, JavaScript</td>
-          </tr>
-          <tr class="roww" onclick="window.open('https://instagram.com', '_blank');">
-              <td>Project 4</td>
-              <td>A brief description of Project 2.</td>
-              <td>React, Node.js</td>
-          </tr>
-          <tr class="roww" onclick="window.open('https://instagram.com', '_blank');">
-            <td>Project 5</td>
-            <td>A brief description of Project 1.</td>
-            <td>HTML, CSS, JavaScript</td>
-        </tr>
-        <tr class="roww" onclick="window.open('https://instagram.com', '_blank');">
-            <td>Project 6</td>
-            <td>A brief description of Project 2.</td>
-            <td>React, Node.js</td>
-        </tr>
-        </table>
-        </div>
-      </section>
-            
+        </div>          
         
 
-        <form id="contact" target="_blank" action="https://formsubmit.co/codewithkaran9@gmail.com" method="POST" class="contact">
+        <form data-aos="zoom-out" id="contact" target="_blank" action="https://formsubmit.co/codewithkaran9@gmail.com" method="POST" class="contact">
             <div class="container">
                 <h3>BOOK A QUOTE</h3>
                 <div class="form-group">
@@ -252,6 +213,13 @@
         </footer>
 
         <script src="script.js"></script>
+        <script>
+          AOS.init({
+            duration: 400,
+            easing: 'ease-in-out',
+            offset: 100,
+        });
+        </script>
     </body>
     
 </body>

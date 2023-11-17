@@ -1,30 +1,25 @@
-// service hover animation
+function applyHoverAnimation(elements) {
+  elements.forEach((element) => {
+    element.addEventListener('mouseover', () => {
+      // Scale up the element
+      element.style.transform = 'scale(1.1)';
+    });
+
+    element.addEventListener('mouseout', () => {
+      // Restore the original scale and background color
+      element.style.transform = 'scale(1)';
+      element.style.backgroundColor = 'initial';
+      // Reset the transition property
+      element.style.transition = 'transform 0.3s ease, background-color 0.3s ease';
+    });
+  });
+}
+
 const serviceElements = document.querySelectorAll('.service');
+applyHoverAnimation(serviceElements);
 
-  serviceElements.forEach((element) => {
-    element.addEventListener('mouseover', () => {
-      const randomRotation = (Math.random() * 2 - 1) * 3; // Generates a random number between -3 and 3
-      element.style.transform = `scale(1.05) rotate(${randomRotation}deg)`;
-    });
-
-    element.addEventListener('mouseout', () => {
-      element.style.transform = 'scale(1) rotate(0deg)';
-    });
-  });
-
-  const testomonial = document.querySelectorAll('.snip1533');
-
-  testomonial.forEach((element) => {
-    element.addEventListener('mouseover', () => {
-      const randomRotation = (Math.random() * 2 - 1) * 3; // Generates a random number between -3 and 3
-      element.style.transform = `scale(1.05) rotate(${randomRotation}deg)`;
-    });
-
-    element.addEventListener('mouseout', () => {
-      element.style.transform = 'scale(1) rotate(0deg)';
-    });
-  });
-
+const testimonialElements = document.querySelectorAll('.snip1533');
+applyHoverAnimation(testimonialElements);
 
   
 

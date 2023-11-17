@@ -4,7 +4,7 @@
 
 
 :root {
-    --primary-bg-color: rgb(19, 18, 23);
+    --primary-bg-color: #131217;
     --navbar-text-color: #22a8d5;
     --navbar-accent-color: #1580a3;
     --font-size: 20px;
@@ -12,7 +12,6 @@
 
 * {
     font-size: var(--font-size);
-    text-transform: uppercase;
     user-select: none;
     
 }
@@ -30,18 +29,31 @@ body {
     
 }
 
+
+.scroll-downs {
+    display: none
+}
+
 ::-webkit-scrollbar {
-    width: 12px;
+   display: none;
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--navbar-text-color);
-    
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    /* Add any additional styling you want here */
 }
 
-::-webkit-scrollbar-track {
-    background: var(--primary-bg-color);
+/* If needed, you can target the span inside the button */
+.navbar-toggler-icon {
+    color: white !important;
 }
+
+
+
+
+
+
 
 
 
@@ -64,6 +76,7 @@ body {
 
 
 .navbar-brand {
+    text-transform: uppercase;
     font-weight: bold;
     background: var(--navbar-text-color) -webkit-gradient(linear, 100% 0, 0 0, from(var(--navbar-text-color)), color-stop(0.5, #ffffff), to(var(--navbar-text-color)));
     letter-spacing: 2px;
@@ -97,6 +110,7 @@ nav li a {
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
+    text-transform: uppercase;
     padding: 5px 0;
     letter-spacing: 2px;
     position: relative;
@@ -105,6 +119,7 @@ nav li a {
     -webkit-text-fill-color: transparent;
     margin-left: 50px !important;
     transition: all 0.3s ease-in-out;
+    z-index: 999;
   }
   
 nav li  a::before {
@@ -130,9 +145,12 @@ nav li  a:hover::before {
 
 
 
+
+
 /* Home page */
 
   .home {
+    position: relative;
     display: flex;
     justify-content:space-evenly; 
     align-items: center; 
@@ -213,7 +231,13 @@ nav li  a:hover::before {
 .contact {
     background-color: var(--primary-bg-color);
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+
+
 
 
 
@@ -224,17 +248,18 @@ h1 {
     max-width: 1000px;
     font-size: 75px;
     line-height: 90px;
+    text-align: left;
     position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
 }
 
 .highlight {
     color: var(--navbar-text-color);
     text-align: left;
-    max-width: 1000px;
     font-size: 75px;
     line-height: 90px;
 }
@@ -376,7 +401,7 @@ h3 {
 p {
     font-size: 16px;
     color: #ffffff;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans';
     text-transform: none;
     font-weight: bold;
     
@@ -448,96 +473,73 @@ textarea {
 
 
 
-/* footer */
 footer {
     position: relative;
     bottom: 0;
     height: fit-content;
     font-family: 'Noto Sans', sans-serif;
     background: linear-gradient(to right, #22a8d5, #7c1ebb);
+    text-transform: uppercase;
     text-align: center;
     color: var(--primary-bg-color);
     letter-spacing: 2px;
     display: flex;
     align-items: center;
-    padding-block: 10px;
+    padding: 10px 0;
     justify-content: space-evenly;
     flex-direction: column;
 }
 
-
 footer ul {
     list-style: none;
     padding: 0;
-    display: inline;
-    position: relative;
-    z-index: 500;
+    display: flex; /* Change from inline to flex */
+    justify-content: center;
+    margin-top: 15px; /* Add some margin for better spacing */
+}
+
+footer li {
+    margin: 0 15px; /* Add margin between list items */
 }
 
 footer a {
-    background-image: linear-gradient(to right, var(--primary-bg-color),  var(--primary-bg-color) 50%,  var(--primary-bg-color) 50%);
+    background-image: linear-gradient(to right, var(--primary-bg-color), var(--primary-bg-color) 50%, var(--primary-bg-color) 50%);
     background-size: 200% 100%;
     background-position: -100%;
-    display: inline-block;
     text-decoration: none;
-    color:  var(--primary-bg-color);
+    color: var(--primary-bg-color);
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-left: 50px;
     font-size: 25px;
     transition: all 0.3s ease-in-out;
-  }
-  
-footer  a::before {
+    margin-left: 10px; /* Adjusted for better spacing */
+}
+
+footer a::before {
     content: '';
-    background:  var(--primary-bg-color);
+    background: var(--primary-bg-color);
     position: absolute;
     bottom: -3px;
     left: 0;
     width: 0;
     height: 3.5px;
     transition: all 0.2s ease-in-out;
-  }
-  
-footer  a:hover {
-    background-position: 0;
-  }
-  
-footer  a:hover::before {
-    width: 100%;
-  }
-
-footer li {
-    display: inline;
-    margin-right: 15px;
-}
-
-   
-.about {
-    height: fit-content;
-    padding-block: 2em;
-    background: linear-gradient(to right, #22a8d5, #7c1ebb);
-}
-
-
-footer a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #dcdcdc;
-    text-decoration: none;
+    background-position: 0;
+}
+
+footer a:hover::before {
+    width: 100%;
 }
 
 footer h4 {
     font-size: 35px;
-    position: relative;
+    margin: 15px 0; /* Adjusted for better spacing */
 }
 
 footer p {
@@ -549,20 +551,30 @@ footer p {
 }
 
 .fas.fa-copyright {
-    position: relative;
-    top: 0;
     color: var(--primary-bg-color);
 }
 
 footer ul,
 footer h4,
 footer p {
-    margin: 25px 0;
+    margin: 15px 0; /* Adjusted for better spacing */
+}
+
+   
+.about {
+    height: fit-content;
+    padding-block: 2em;
+    background: linear-gradient(to right, #22a8d5, #7c1ebb);
 }
 
 
 
+
+
 @media (max-width: 768px) {
+    body {
+        outline: none;
+    }
     ::-webkit-scrollbar {
         display: none;
     }
@@ -572,10 +584,11 @@ footer p {
     }
     
     .navbar {
-        background-color: var(--primary-bg-color);
         padding-inline: 30px;
-        box-shadow: 0px -2px 0px 0px white !important; 
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1) !important; /* Adjust the shadow as needed */
     }
+
+
 
     .l-but {
         bottom: 20%;
@@ -590,7 +603,19 @@ footer p {
       }
       
 
-    
+      .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+
+      body {
+        padding-top: 72.75px; /* Adjust this value according to your navbar's height */
+      }
+
+   
     
     /* Home page */
     
@@ -665,6 +690,7 @@ footer p {
         color: white;
         font-size: 40px;
         line-height: 50px; 
+        text-align: center;
         max-width: 400px;
     }
     
@@ -685,6 +711,7 @@ footer p {
     
     footer a {
         display: inline;
+        font-size: 20px;
         text-decoration: none;
         font-weight: bold;
         letter-spacing: 2px;
@@ -722,37 +749,45 @@ footer p {
         font-size: 20px;
     }
 
-    .projects-section {
-        text-align: center;
-    }
-    
-    .projects {
-        display: flex;
-        justify-content: center;
-    }
-    
-    table {
-        border-collapse: collapse;
-    }
-    
-    th, td {
-        color: white;
-        border: 3px solid var(--navbar-text-color);
-        text-align: left;
-        padding: 4px;
-        font-size: 15px !important;
-    }
-    
-    .roww:hover {
-        opacity: 0.5;
-    }
-    
-    th {
-        background: linear-gradient(to bottom, #22a8d5, #7c1ebb);
-        color: var(--primary-bg-color);
-        font-weight: bold;
-        font-size: 17px !important;
-    }
+    .scroll-downs {
+        display: block;
+        position: absolute;
+        top: 500px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 8000;
+        width :34px;
+        height: 55px;
+      }
+      .mousey {
+        width: 3px;
+        padding: 10px 15px;
+        height: 35px;
+        z-index: 999;
+        z-index: 8000;
+        border: 3px solid #fff;
+        border-radius: 25px;
+        opacity: 0.75;
+        box-sizing: content-box;
+      }
+      .scroller {
+        width: 3px;
+        height: 10px;
+        border-radius: 25%;
+        z-index: 8000;
+        background-color: #fff;
+        animation-name: scroll;
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+        animation-iteration-count: infinite;
+      }
+      @keyframes scroll {
+        0% { opacity: 0; }
+        10% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(15px); opacity: 0;}
+      }
 }
 
 
@@ -831,44 +866,6 @@ footer p {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.projects-section {
-    text-align: center;
-    padding-block: 75px;
-    padding-bottom: 150px;
-}
 
-.projects {
-    display: flex;
-    justify-content: center;
-}
-
-table {
-    width: 60%;
-    border-collapse: collapse;
-}
-
-th, td {
-    color: white;
-    border: 3px solid var(--navbar-text-color);
-    text-align: left;
-    padding: 8px;
-    font-family: 'Noto Sans', sans-serif;
-    text-transform:lowercase;
-}
-
-.roww:hover {
-    opacity: 0.5;
-}
-
-th {
-    background: linear-gradient(to bottom, #22a8d5, #7c1ebb);
-    color: var(--primary-bg-color);
-    font-weight: bold;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-family: 'Urbanist', sans-serif;
-}
-
-  
 
 
