@@ -292,6 +292,10 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 10vh;
     border: none;
 }
+
+button:focus, button:active {
+    outline: none !important;
+}
   
   a span, button span {
     position: relative;
