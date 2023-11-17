@@ -711,10 +711,10 @@ footer p {
     
     footer a {
         display: inline;
-        font-size: 20px;
+        font-size: 18px;
         text-decoration: none;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         position: relative;
       }
       
@@ -732,6 +732,7 @@ footer p {
     }
     
     footer h4 {
+        font-weight: bold;
         font-size: 20px;
         position: relative;
         left: 0;
