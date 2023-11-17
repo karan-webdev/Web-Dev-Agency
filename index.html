@@ -219,6 +219,26 @@
             easing: 'ease-in-out',
             offset: 100,
         });
+
+        function setDataAosAttribute() {
+        var element = document.getElementById('contact'); // Replace with the actual ID of your element
+
+        if (window.innerWidth < 768) { // Adjust the breakpoint as needed
+          element.setAttribute('data-aos', 'fade-right');
+        } else {
+          element.setAttribute('data-aos', 'zoom-out');
+        }
+
+        // Initialize AOS
+        AOS.init();
+      }
+
+      // Call the function initially
+      setDataAosAttribute();
+
+      // Update data-aos attribute on window resize
+      window.addEventListener('resize', setDataAosAttribute);
+   
         </script>
     </body>
     
