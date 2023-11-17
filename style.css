@@ -144,8 +144,37 @@ nav li  a:hover::before {
 
 
 
+.statistic {
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15vh;
+}
+
+.box h2 {
+    font-weight: bold;
+    font-size: 55px;
+    color: #22a8d5;
+}
+
+.B {
+    color: rgb(26, 96, 200) !important;
+}
+
+.C {
+    color: #592eb5 !important;
+}
+
+.D {
+    color: #7c1ebb !important;
+}
 
 
+.statistic-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
 /* Home page */
 
@@ -723,7 +752,9 @@ footer p {
         position: relative;
       }
       
-    
+      .box h2 {
+        font-size: 40px;
+    }
        
     
     footer a {
