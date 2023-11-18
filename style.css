@@ -59,10 +59,22 @@ body {
     color: #22a8d5;
 }
 
+.erupt2 {
+    position: absolute;
+    height: 200px;
+    right: 0px;
+    opacity: 0.5;
+    margin-top: -200px;
+    margin-left: -75px;
+}
 
-
-
-
+.erupt3 {
+    position: absolute;
+    height: 200px;
+    left: 0px;
+    margin-top: 0;
+    margin-left: 0;
+}
 
 
 
@@ -252,12 +264,14 @@ nav li  a:hover::before {
 
 
 .about h2 {
+    z-index: 2;
     color: var(--primary-bg-color);
     text-align: center;
     position: relative;
 }
 
 .about p {
+    z-index: 2;
     border-radius: 15px;
     color: var(--navbar-text-color);
     text-align: center;
@@ -861,13 +875,22 @@ footer p {
         display: none;
       }
 
+ 
+
       .erupt {
         height: 115px;
         margin-top: -42.5px;
         margin-left: -62.5px;
       }
 
-      
+      .erupt2 {
+       display: none;
+      }
+
+
+      .erupt3 {
+        display: none;
+      }
 }
 
 
