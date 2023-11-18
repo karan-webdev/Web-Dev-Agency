@@ -718,6 +718,8 @@ footer p {
       }
 
     
+
+    
     nav ul:nth-child(1) {
         margin-top: 20px;
     }
@@ -733,7 +735,7 @@ footer p {
         top: 0;
         z-index: 1000;
       }
-
+        
 
       body {
         padding-top: 72.75px; /* Adjust this value according to your navbar's height */
