@@ -51,6 +51,7 @@ body {
 }
 
 
+/* Initial styles for the bars */
 .navbar-toggler-bar {
     display: block;
     width: 25px;
@@ -58,26 +59,34 @@ body {
     margin: 5px 0;
     height: 3px;
     border-radius: 5px;
-    transition: transform 0.3s; 
-  }
+    transition: transform 0.3s, opacity 0.1s ease; 
+}
 
 .navbar-toggler-bar:nth-child(2) {
     width: 20px !important;
-    transform: translateX(25%);
+    transform: translateX(0); /* Set initial position */
 }
 
-.navbar-toggler:not(.collapsed) .navbar-toggler-bar:nth-child(3) {
-    transform: rotate(45deg) translateX(-10px); /* Rotate the third bar when the toggle button is active */
+/* Initial styles for the bars when collapsed */
+.collapse .navbar-toggler-bar {
+    transform: rotate(0) translateX(0);
+    opacity: 1;
 }
 
-.navbar-toggler:not(.collapsed) .navbar-toggler-bar:nth-child(1) {
-    transform: rotate(135deg) translateX(12px); /* Rotate the third bar when the toggle button is active */
+
+.navbar-toggler.active .navbar-toggler-bar:nth-child(3) {
+    transform: rotate(45deg) translateX(-10px);
 }
 
-.navbar-toggler:not(.collapsed) .navbar-toggler-bar:nth-child(2) {
-    opacity: 0; /* Set opacity as needed when the toggle button is active */
+.navbar-toggler.active .navbar-toggler-bar:nth-child(1) {
+    transform: rotate(135deg) translateX(12px);
 }
-  
+
+.navbar-toggler.active .navbar-toggler-bar:nth-child(2) {
+    opacity: 0;
+}
+
+
 
 .erupt {
     position: absolute;

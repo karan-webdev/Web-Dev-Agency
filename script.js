@@ -48,9 +48,11 @@ applyHoverAnimation(testimonialElements);
       }, 500)
   })
   
+  document.getElementById('custom-toggler').addEventListener('click', function () {
+    // Toggle the 'active' class on the toggler button
+    this.classList.toggle('active');
+});
 
-  
-  
   
   
 
