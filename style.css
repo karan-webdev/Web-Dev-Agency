@@ -26,7 +26,7 @@ html, body {
 
 body {
     background-color: var(--primary-bg-color);
-    
+    height: 100%;
 }
 
 
@@ -594,7 +594,6 @@ textarea {
 footer {
     position: relative;
     bottom: 0;
-    height: fit-content;
     font-family: 'Noto Sans', sans-serif;
     background: linear-gradient(to right, #22a8d5, #7c1ebb);
     text-transform: uppercase;
@@ -606,6 +605,10 @@ footer {
     padding: 10px 0;
     justify-content: space-evenly;
     flex-direction: column;
+}
+
+.space {
+    height: 50px;
 }
 
 footer ul {
@@ -817,7 +820,6 @@ footer p {
         font-size: 40px;
         line-height: 50px; 
         text-align: left;
-        max-width: 326px;
         margin-left: auto;
         margin-right: auto;
     }
