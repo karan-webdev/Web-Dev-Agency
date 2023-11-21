@@ -818,6 +818,7 @@ footer p {
     h1 {
         color: white;
         font-size: 40px;
+        max-width: 326px;
         line-height: 50px; 
         text-align: left;
         margin-left: auto;
