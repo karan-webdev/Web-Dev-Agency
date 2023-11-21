@@ -247,7 +247,7 @@ nav li  a:hover::before {
     height: 100svh;
     text-align: center; 
     flex-direction: column;
-    background-color: var(--primary-bg-color);
+    z-index: 999;
 }
 
 #back-to-top {
@@ -602,6 +602,7 @@ footer {
     letter-spacing: 2px;
     display: flex;
     align-items: center;
+    backdrop-filter: blur(10px);
     padding: 10px 0;
     justify-content: space-evenly;
     flex-direction: column;
@@ -703,7 +704,10 @@ footer p {
     .navbar-brand {
         font-size: 20px;
     }
-    
+
+    :root {
+        --blob-size: 200px;
+    }
     .navbar {
         padding-inline: 30px;
         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1) !important; /* Adjust the shadow as needed */
@@ -1023,3 +1027,133 @@ footer p {
 
 
 
+:root {
+    --blob-size: 600px;
+    --blob-speed: 8s;
+    --blob-speed-scale: calc(0.75 * var(--blob-speed));
+    --blob-speed-move: calc(1 * var(--blob-speed));
+    --blob-speed-rotate: calc(2 * var(--blob-speed));
+    --blob-opacity: 0.8;
+    --blob-blur: 80px;
+    --blob-color-1: #7c1ebb;
+    --blob-color-2: #7c1ebb;
+    --blob-color-3: #22a8d5;
+  }
+  
+  .blobs {
+    z-index: 8;
+    position: relative;
+    filter: blur(var(--blob-blur));
+  
+    * {
+      backface-visibility: hidden;
+      transform-origin: 50% 50%;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+  
+    &:after {
+      position: relative;
+      display: block;
+      width: 22rem;
+      height: 38rem;
+      background: hsla(0deg, 0%, 72%, 0.08);
+      backdrop-filter: blur(8rem) saturate(1.6);
+      border-radius: 1.5rem;
+      z-index: 2;
+    }
+  }
+  
+  .blob {
+    width: var(--blob-size);
+    height: calc(0.25 * var(--blob-size));
+    background-color: var(--blob-color-1);
+    border-radius: 100%;
+    opacity: var(--blob-opacity);
+    mix-blend-mode: multiply;
+    animation: blob ease-in-out var(--blob-speed-scale) infinite;
+  
+    .blobs > :nth-child(2) & {
+      background-color: var(--blob-color-2);
+      animation-delay: calc(-0.8 * var(--blob-speed-scale));
+    }
+  
+    .blobs > :nth-child(3) & {
+      background-color: var(--blob-color-3);
+      animation-delay: calc(-0.2 * var(--blob-speed-scale));
+    }
+  }
+  
+  @keyframes blob {
+    0%, 100% {
+      transform: scale(0.8, 2);
+    }
+    50% {
+      transform: scale(1.4, 0.8);
+    }
+  }
+  
+  .blob-rotate {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: blob-rotate linear var(--blob-speed-rotate) infinite alternate;
+  
+    &:nth-child(2) {
+      animation-duration: calc(2 * var(--blob-speed-rotate));
+      animation-delay: calc(-1.5 * var(--blob-speed-rotate));
+    }
+  
+    &:nth-child(3) {
+      animation-direction: alternate-reverse;
+      animation-duration: calc(0.8 * var(--blob-speed-rotate));
+      animation-delay: calc(-1 * var(--blob-speed-rotate));
+    }
+  }
+  
+  @keyframes blob-rotate {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotateZ(-28deg);
+      transform-origin: 50% 100%;
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotateZ(28deg);
+      transform-origin: 50% 0%;
+    }
+  }
+  
+  .blob-move {
+    animation: blob-move ease-in-out var(--blob-speed-move) infinite;
+  
+    .blobs > :nth-child(2) & {
+      animation-delay: calc(-0.8 * var(--blob-speed-move));
+    }
+  
+    .blobs > :nth-child(3) & {
+      animation-delay: calc(-0.4 * var(--blob-speed-move));
+    }
+  }
+  
+  @keyframes blob-move {
+    0%, 100% {
+      transform: translateX(30%);
+    }
+    50% {
+      transform: translateX(-30%);
+    }
+  }
+  
+  /* Supporting styles */
+  
+  *,
+  :before,
+  :after {
+    box-sizing: border-box;
+  }
+
+  
+
+.blob-container {
+    position: relative;
+    top: 50%;
+}
