@@ -705,12 +705,13 @@ footer p {
         font-size: 20px;
     }
 
-    :root {
-        --blob-size: 200px;
-    }
     .navbar {
         padding-inline: 30px;
         box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1) !important; /* Adjust the shadow as needed */
+    }
+
+    :root {
+        --blob-size: 500px !important;
     }
 
 
@@ -816,8 +817,6 @@ footer p {
         height: fit-content;
     }
     
-    
-
     
     h1 {
         color: white;
