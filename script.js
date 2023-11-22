@@ -27,23 +27,20 @@ applyHoverAnimation(testimonialElements);
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-})
+    cursor.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`;
+});
 
 document.addEventListener('click', () => {
-    cursor.classList.add("expand");
+    cursor.classList.add('expand');
 
     setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
-})
+        cursor.classList.remove('expand');
+    }, 500);
+});
 
 document.getElementById('custom-toggler').addEventListener('click', function () {
     // Toggle the 'active' class on the toggler button
     this.classList.toggle('active');
 });
-
-  
-  
 
 

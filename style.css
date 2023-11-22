@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans&family=Roboto:wght@500&family=Urbanist:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
 :root {
     --primary-bg-color: #131217;
@@ -151,6 +152,7 @@ body {
     -webkit-background-size: 4rem 100%; /*50px*/ 
 }
 
+
 @-webkit-keyframes shimmer {
     0% {
         background-position: -4rem top; /*50px*/
@@ -170,7 +172,7 @@ nav li a {
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
-    text-transform: uppercase;
+    
     padding: 5px 0;
     letter-spacing: 2px;
     position: relative;
@@ -280,10 +282,10 @@ nav li  a:hover::before {
     height: 30px;
     border: 3px solid white;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
-    animation: cursorAnim .5s infinite alternate;
+    animation: cursorAnim .5s infinite alternate transform 0.1s ease-out;
     pointer-events: none;
 }
 
@@ -367,7 +369,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Manrope', sans-serif !important;
     text-transform: uppercase;
 }
 
@@ -489,13 +491,37 @@ h2 {
     margin: 10px;
     width: 400px;
     height: 200px;
-    display: inline-block;
-    background-color: var(--primary-bg-color);
-    border-radius: 5px;
+    z-index: 999 !important;
     border: 3px solid var(--navbar-text-color);
     transition: transform 0.2s;
+
+
+    border: 3px solid var(--navbar-text-color);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.2s;
+    border-radius: 8px;
 }
 
+
+  
+  .service::before {
+    content: '';
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22a8d5;
+    opacity: 0.4;
+    -webkit-filter: blur(3px);
+    z-index: -1; /* Push the pseudo-element behind the text */
+  }
   
 
 
@@ -508,12 +534,26 @@ h2 {
     position: relative;
 }
 
+.service h3 {
+    color: var(--primary-bg-color);
+    text-transform: capitalize;
+}
 
+.snip1533 h3 {
+    color: var(--primary-bg-color);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    font-family: 'Manrope', sans-serif;
+    text-transform: capitalize;
+  }
 
 h3 {
     font-size: 24px;
     margin: 10px 0;
-    color: var(--navbar-text-color);
+    font-weight: 300;
+    font-family: 'Manrope', sans-serif;
+    color: white;
 }
 
 p {
@@ -521,8 +561,6 @@ p {
     color: #ffffff;
     font-family: 'Noto Sans';
     text-transform: none;
-    font-weight: bold;
-    
 }
 
 p .highlight {
@@ -578,14 +616,13 @@ textarea {
     text-transform: none;
     color: white;
     outline: none;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 textarea {
     min-height: 100px;
     resize: none;
     border: 3px solid var(--navbar-text-color);
-    border-radius: 5px;
     margin-bottom: 20%;
 }
 
@@ -596,7 +633,6 @@ footer {
     bottom: 0;
     font-family: 'Noto Sans', sans-serif;
     background: linear-gradient(to right, #22a8d5, #7c1ebb);
-    text-transform: uppercase;
     text-align: center;
     color: var(--primary-bg-color);
     letter-spacing: 2px;
@@ -819,6 +855,7 @@ footer p {
     
     
     h1 {
+        text-transform: uppercase;
         color: white;
         font-size: 40px;
         max-width: 326px;
@@ -832,6 +869,7 @@ footer p {
         color: var(--navbar-text-color);
         font-size: 40px;
         line-height: 50px;
+        font-weight: bold;
     }
     
     footer {
@@ -945,24 +983,72 @@ footer p {
       .erupt3 {
         display: none;
       }
+
+      #blob-2 {
+       right: 200px !important;
+      }
+
+      #blob-3 {
+        display: block !important;
+        position: relative;
+        top: 750px !important;
+        left: 300px !important;
+        z-index: -1;
+    }
+
+    #blob-4 {
+        display: block !important;
+        top: 400px !important;
+        left: 400px !important;
+    }
+    
+    #blob-5 {
+        display: block !important;
+        top: 800px !important;
+        right: 200px !important;
+    }
+    
+    #blob-6 {
+        display: block !important;
+        top: 1200px !important;
+        left: 500px !important;
+    }
+    
 }
 
 
 .snip1533 {
-  all: initial;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-  border: 3px solid var(--navbar-text-color);
-  display: inline-block;
-  font-size: 16px;
-  margin: 35px 10px 10px;
-  max-width: 310px;
-  min-width: 250px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  transition: transform 0.2s;
-  border-radius: 5px;
-}
+    all: initial;
+    border: 3px solid var(--navbar-text-color);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+    display: inline-block;
+    font-size: 16px;
+    margin: 35px 10px 10px;
+    max-width: 310px;
+    min-width: 250px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.2s;
+    border-radius: 8px;
+  }
+  
+  .snip1533::before {
+    content: '';
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22a8d5;
+    opacity: 0.4;
+    -webkit-filter: blur(3px);
+    z-index: -1; /* Push the pseudo-element behind the text */
+  }
+  
+
 
 .testimonials {
   text-align: center;
@@ -971,7 +1057,7 @@ footer p {
 
 
 .stars {
-      color:#7c1ebb;
+    color: #131217;
     }
 
 .snip1533 *,
@@ -1008,19 +1094,19 @@ footer p {
 }
 
 .snip1533 h3 {
-  color: var(--navbar-text-color);
+  color: var(--primary-bg-color);
   font-size: 20px;
   font-weight: 300;
   line-height: 50px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  text-transform: capitalize;
 }
 
 
 
 .snip1533 blockquote {
-  font-weight: 300;
   margin: 0 0 20px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 
@@ -1155,4 +1241,28 @@ footer p {
 .blob-container {
     position: relative;
     top: 50%;
+}
+
+#blob-2 {
+    position: relative;
+    top: 200px !important;
+    z-index: -1;
+}
+
+
+#blob-3 {
+    display: none;
+}
+
+
+#blob-4 {
+    top: 400px;
+}
+
+#blob-5 {
+    display: none;
+}
+
+#blob-6 {
+   display: none;
 }
