@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     box-sizing: border-box;
     position: relative;
-    bottom: 10vh;
+    bottom: 15svh;
   }
 
   button {
@@ -760,7 +760,7 @@ footer p {
     }
 
     .l-but {
-        bottom: 30vh;
+        bottom: 20vh;
     }
     
     nav li a {
@@ -868,7 +868,6 @@ footer p {
         text-align: left;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 20vh;
     }
     
     .highlight {
