@@ -253,7 +253,6 @@ nav li  a:hover::before {
 }
 
 #back-to-top {
-    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -282,10 +281,10 @@ nav li  a:hover::before {
     height: 30px;
     border: 3px solid white;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
-    animation: cursorAnim .5s infinite alternate transform 0.1s ease-out;
+    animation: cursorAnim .5s infinite alternate;
     pointer-events: none;
 }
 
@@ -305,7 +304,7 @@ nav li  a:hover::before {
 
 .about h2 {
     z-index: 2;
-    color: var(--primary-bg-color);
+    color: white;
     text-align: center;
     position: relative;
 }
@@ -313,7 +312,7 @@ nav li  a:hover::before {
 .about p {
     z-index: 2;
     border-radius: 15px;
-    color: var(--navbar-text-color);
+    color: white;
     text-align: center;
     transform: translate(-50%);
     left: 50%;
@@ -393,6 +392,17 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     bottom: 10vh;
   }
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    cursor: pointer;
+}
 
 .contact button {
     padding: 20px 50px;
@@ -489,13 +499,11 @@ h2 {
 .service {
     padding: 30px;
     margin: 10px;
-    width: 400px;
+    width: 30%;
     height: 200px;
     z-index: 999 !important;
     border: 3px solid var(--navbar-text-color);
     transition: transform 0.2s;
-
-
     border: 3px solid var(--navbar-text-color);
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
     display: inline-block;
@@ -568,7 +576,7 @@ p .highlight {
     text-transform: none;
     font-weight: bolder !important;
     font: inherit;
-    color: var(--primary-bg-color);
+    color: white;
 }
 
 
@@ -632,7 +640,7 @@ footer {
     position: relative;
     bottom: 0;
     font-family: 'Noto Sans', sans-serif;
-    background: linear-gradient(to right, #22a8d5, #7c1ebb);
+    background: #131217;;
     text-align: center;
     color: var(--primary-bg-color);
     letter-spacing: 2px;
@@ -642,6 +650,7 @@ footer {
     padding: 10px 0;
     justify-content: space-evenly;
     flex-direction: column;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4)
 }
 
 .space {
@@ -661,7 +670,7 @@ footer li {
 }
 
 footer a {
-    background-image: linear-gradient(to right, var(--primary-bg-color), var(--primary-bg-color) 50%, var(--primary-bg-color) 50%);
+    background-image: linear-gradient(to right, white, white 50%, white 50%);
     background-size: 200% 100%;
     background-position: -100%;
     text-decoration: none;
@@ -705,11 +714,11 @@ footer p {
     font-size: 25px;
     margin: 10px 0;
     letter-spacing: 1px !important;
-    color: var(--primary-bg-color);
+    color: white;
 }
 
 .fas.fa-copyright {
-    color: var(--primary-bg-color);
+    color: white;
 }
 
 footer ul,
@@ -722,9 +731,8 @@ footer p {
 .about {
     height: fit-content;
     padding-block: 2em;
-    background: linear-gradient(to right, #22a8d5, #7c1ebb);
+    background-color: #1580a3;
 }
-
 
 
 
@@ -740,6 +748,7 @@ footer p {
     .navbar-brand {
         font-size: 20px;
     }
+     
 
     .navbar {
         padding-inline: 30px;
@@ -750,18 +759,14 @@ footer p {
         --blob-size: 500px !important;
     }
 
-
-
     .l-but {
-        bottom: 20%;
+        bottom: 30vh;
     }
     
     nav li a {
         margin: 0 !important;
         font-weight: bold;
       }
-
-    
 
     
     nav ul:nth-child(1) {
@@ -863,6 +868,7 @@ footer p {
         text-align: left;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 20vh;
     }
     
     .highlight {
@@ -916,11 +922,9 @@ footer p {
         font-weight: bold;
         font-size: 20px;
         letter-spacing: 1px !important;
-        color: var(--primary-bg-color);
     }
     
     .fas.fa-copyright {
-        color: var(--primary-bg-color);
         font-size: 20px;
     }
 

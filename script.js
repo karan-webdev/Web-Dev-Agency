@@ -23,12 +23,19 @@ applyHoverAnimation(testimonialElements);
 
   
 
-
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-    cursor.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`;
-});
+    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})
 
 document.addEventListener('click', () => {
     cursor.classList.add('expand');
@@ -44,3 +51,22 @@ document.getElementById('custom-toggler').addEventListener('click', function () 
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var backToTopButton = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', function() {
+      // Get the current scroll position
+      var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      // Set the opacity based on the scroll position
+      backToTopButton.style.opacity = scrollPosition > 100 ? '1' : '0';
+  });
+
+  // Add a click event listener to scroll back to the top when the button is clicked
+  backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+});
