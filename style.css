@@ -256,7 +256,7 @@ nav li  a:hover::before {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 999;
+    z-index: 999999;
     background-color: #ffffff;
     border: none;
     border-radius: 50%;
