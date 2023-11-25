@@ -1305,8 +1305,8 @@ footer p {
   text-align: center;
 }
 
-#last {
-  border: none;
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
