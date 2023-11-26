@@ -276,7 +276,7 @@ nav li  a:hover::before {
   }
   
   .cursor {
-    z-index: 999;
+    z-index: 1999;
     width: 30px;
     height: 30px;
     border: 3px solid white;
@@ -1018,7 +1018,21 @@ footer p {
     
 
     .faq-container {
-      width: 400px !important;
+      width: 350px !important;
+    }
+
+    .projects {
+      flex-direction: column!important;
+    }
+
+    .browser {
+      width: 350px !important;
+      height: 250px !important;
+      margin-bottom: 30px !important;
+    }
+
+    .browser img {
+      bottom: -17.5px !important;
     }
 }
 
@@ -1343,4 +1357,99 @@ footer p {
 
 .icon-container i.active {
   transform: rotate(90deg);
+}
+
+.browser {
+  margin: 10px;
+  width: 413px;
+  height: 335px;
+  z-index: 999 !important;
+  border: 3px solid var(--navbar-text-color);
+  transition: transform 0.2s;
+  border: 3px solid var(--navbar-text-color);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.2s;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.browser::before {
+  content: '';
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #22a8d5;
+  opacity: 0.4;
+  -webkit-filter: blur(3px);
+  z-index: -1; /* Push the pseudo-element behind the text */
+}
+
+.brow-head {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  z-index: 2;
+}
+
+.tools {
+  display: flex;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 12.5px;
+  width: 12.5px;
+  background-color: #22a8d5;
+  margin: 5px;
+}
+
+.circle:nth-of-type(2) {
+  background-color: #0c6b8b;
+}
+
+.tab {
+  width: 60%;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+  border: 1px solid #22a8d5;
+  border-radius: 4px;
+}
+
+.browser img {
+  position: absolute;
+  bottom: -10px;
+  transform: translate(50%, 0%);
+  right: 50%;
+  border-radius: 8px;
+  height: 90%; /* Ensure the image doesn't exceed the container height */
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.browser img:nth-of-type(3) {
+  width: 0% !important;
 }

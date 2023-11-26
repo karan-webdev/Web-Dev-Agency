@@ -21,6 +21,8 @@ applyHoverAnimation(serviceElements);
 const testimonialElements = document.querySelectorAll('.snip1533');
 applyHoverAnimation(testimonialElements);
 
+const browserElements = document.querySelectorAll('.browser');
+applyHoverAnimation(browserElements);
   
 
 const cursor = document.querySelector('.cursor');
@@ -101,3 +103,6 @@ faqItems.forEach(item => {
     }
   });
 });
+
+
+
