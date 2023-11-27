@@ -1094,7 +1094,7 @@ footer p {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   h1, .highlight {
     max-width: 500px !important;
     text-align: center !important;
@@ -1115,7 +1115,11 @@ footer p {
 
 @media (max-width: 1365px) {
   .projects {
-    gap: 10px;
+    gap: 10px !important;
+  }
+
+  .browser {
+    width: 200px !important;
   }
 }
 
