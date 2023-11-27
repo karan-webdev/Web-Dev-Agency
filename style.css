@@ -1096,7 +1096,7 @@ footer p {
 
 @media (max-width: 380px) {
   h1, .highlight {
-    width: 350px !important;
+    width: 375px !important;
   }
   .erupt {
     display: none;
