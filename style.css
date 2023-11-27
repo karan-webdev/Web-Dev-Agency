@@ -1118,6 +1118,10 @@ footer p {
     gap: 10px !important;
   }
 
+  h1 { 
+    color : pink !important;
+  }
+
   .browser {
     width: 200px !important;
   }
