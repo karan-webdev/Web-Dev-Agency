@@ -1098,7 +1098,7 @@ footer p {
   h1, .highlight {
     max-width: 500px !important;
     text-align: left !important;
-    left: 5%;
+    left: 10%;
   }
   .erupt {
     display: none;
