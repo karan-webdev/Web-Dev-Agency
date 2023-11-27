@@ -106,3 +106,12 @@ faqItems.forEach(item => {
 
 
 
+// Disable cursor during scrolling
+document.body.addEventListener('scroll', () => {
+  yourCursorElement.style.pointerEvents = 'none';
+});
+
+// Enable cursor after scrolling stops
+document.body.addEventListener('scroll', () => {
+  yourCursorElement.style.pointerEvents = 'auto';
+});

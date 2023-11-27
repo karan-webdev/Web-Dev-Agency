@@ -205,6 +205,45 @@ nav li  a:hover::before {
   }
 
 
+  
+
+  
+  
+  /* CSS */
+  .button-62 {
+    position: relative;
+    bottom: 6em;
+    background: linear-gradient(to bottom right, #22a8d5, #592eb5);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: .25rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button-62:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(71, 208, 239, 0.5), .125rem .125rem 1rem rgba(90, 112, 255, 0.5);
+  }
+  
+  .button-62:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(71, 208, 239, 0.5), .125rem .125rem 1rem rgba(90, 112, 255, 0.5);
+  }
+
+
+
 
 .statistic {
     text-align: center; 
@@ -406,18 +445,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact button {
-    padding: 20px 50px;
-    text-decoration: none !important;
-    text-transform: uppercase;
-    width: 200px;
-    overflow: hidden;
-    border-radius: 40px;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    position: relative;
-    bottom: 10vh;
-    border: none;
+   top: 2vh;
+   margin-bottom: 150px;
 }
 
 button:focus, button:active {
@@ -617,22 +646,48 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
+    border: none;
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
+    margin: 25px 0;
     background-color: var(--primary-bg-color);
-    border: 3px solid var(--navbar-text-color);
+    border-bottom: 3px solid var(--navbar-text-color);
     text-transform: none;
     color: white;
     outline: none;
-    border-radius: 8px;
+    
 }
 
 textarea {
-    min-height: 100px;
     resize: none;
-    border: 3px solid var(--navbar-text-color);
-    margin-bottom: 20%;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: font-size 0.3s, top 0.3s;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 14px;
 }
 
 
@@ -650,12 +705,9 @@ footer {
     padding: 10px 0;
     justify-content: space-evenly;
     flex-direction: column;
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.4)
+    border-top: 2px solid white;
 }
 
-.space {
-    height: 50px;
-}
 
 footer ul {
     list-style: none;
@@ -750,6 +802,9 @@ footer p {
         font-size: 20px;
     }
      
+    .button-62 {
+      bottom: 150px;
+    }
 
     .navbar {
         padding-inline: 30px;
@@ -835,7 +890,7 @@ footer p {
     }
 
     textarea {
-        margin-bottom: 35%;
+        
     }
     
     
@@ -1329,18 +1384,17 @@ footer p {
 }
 
 .faq-question {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   padding-bottom: 3px;
   padding-top: 3px;
 }
 
 .faq-answer {
-  font-size: 16px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
-  text-align: center;
+  text-align: left;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -1348,6 +1402,7 @@ footer p {
 .faq-answer p {
   color: rgb(255, 255, 255) !important;
   padding-top: 15px;
+  font-size: 20px !important;
 }
 
 .faq-answer.active {
