@@ -805,7 +805,7 @@ footer p {
     }
      
     .button-62 {
-      bottom: 150px;
+      bottom: 20vh;
     }
 
     .navbar {
@@ -815,10 +815,6 @@ footer p {
 
     :root {
         --blob-size: 500px !important;
-    }
-
-    .l-but {
-        bottom: 15%;
     }
     
     nav li a {
