@@ -93,7 +93,8 @@ body {
    position: absolute;
     height: 150px;
     left: 0px;
-    margin-top: -45.5px;
+    top: 0;
+        transform: translateY(-20%);
     color: #22a8d5;
 }
 
@@ -1029,8 +1030,9 @@ footer p {
  
 
       .erupt {
-        height: 115px;
-        margin-top: -40.5px;
+        height: 100px;
+        top: 0;
+        transform: translateY(-12%) !important;
       }
 
       .erupt2 {
@@ -1096,6 +1098,15 @@ footer p {
     }
 }
 
+@media (max-width: 380px) {
+  .erupt {
+    display: none;
+  }
+
+  .navbar-brand {
+    margin: 0 !important;
+  }
+}
 
 .snip1533 {
     all: initial;
