@@ -1113,6 +1113,12 @@ footer p {
   }
 }
 
+@media (max-width: 1365px) {
+  .projects {
+    gap: 10px;
+  }
+}
+
 .snip1533 {
     all: initial;
     border: 3px solid var(--navbar-text-color);
