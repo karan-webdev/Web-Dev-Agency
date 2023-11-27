@@ -1102,6 +1102,11 @@ footer p {
   .navbar-brand {
     margin: 0 !important;
   }
+
+  footer a {
+    font-size: 17px !important;
+    margin: 0 !important;
+  }
 }
 
 .snip1533 {
