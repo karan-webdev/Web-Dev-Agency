@@ -1096,7 +1096,7 @@ footer p {
 
 @media (max-width: 380px) {
   h1, .highlight {
-    max-width: 326px !important;
+    max-width: 400px !important;
     text-align: left !important;
   }
   .erupt {
