@@ -287,9 +287,9 @@ nav li  a:hover::before {
     align-items: center; 
     height: 100vh;
     height: 100svh;
+    text-align: center; 
     flex-direction: column;
     z-index: 999;
-    max-width: 100% !important;
 }
 
 #back-to-top {
@@ -1096,7 +1096,7 @@ footer p {
 
 @media (max-width: 380px) {
   h1, .highlight {
-    width: 500px !important;
+    max-width: 500px !important;
     text-align: center !important;
   }
   .erupt {
