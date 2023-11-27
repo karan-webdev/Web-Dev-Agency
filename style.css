@@ -1116,11 +1116,13 @@ footer p {
 @media (max-width: 1365px) {
   .projects {
     gap: 10px !important;
+    flex-direction: column;
   }
 
 
+
   .browser {
-    
+  
   }
 }
 
