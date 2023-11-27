@@ -90,11 +90,10 @@ body {
 
 
 .erupt {
-    position: absolute;
+   position: absolute;
     height: 150px;
     left: 0px;
-    margin-top: -52.5px;
-    margin-left: -75px;
+    margin-top: -45.5px;
     color: #22a8d5;
 }
 
@@ -150,6 +149,7 @@ body {
     -webkit-animation-duration: 3.2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-background-size: 4rem 100%; /*50px*/ 
+    margin-left: 100px;
 }
 
 
@@ -1029,8 +1029,7 @@ footer p {
 
       .erupt {
         height: 115px;
-        margin-top: -42.5px;
-        margin-left: -62.5px;
+        margin-top: -40.5px;
       }
 
       .erupt2 {
