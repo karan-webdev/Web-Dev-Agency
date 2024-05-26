@@ -1,117 +1,85 @@
-function applyHoverAnimation(elements) {
-  elements.forEach((element) => {
-    element.addEventListener('mouseover', () => {
-      // Scale up the element
-      element.style.transform = 'scale(1.1)';
-    });
-
-    element.addEventListener('mouseout', () => {
-      // Restore the original scale and background color
-      element.style.transform = 'scale(1)';
-      element.style.backgroundColor = 'initial';
-      // Reset the transition property
-      element.style.transition = 'transform 0.3s ease, background-color 0.3s ease';
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("contactButton").addEventListener("click", function() {
+      window.location.href = "contact.html";
   });
-}
-
-const serviceElements = document.querySelectorAll('.service');
-applyHoverAnimation(serviceElements);
-
-const testimonialElements = document.querySelectorAll('.snip1533');
-applyHoverAnimation(testimonialElements);
-
-const browserElements = document.querySelectorAll('.browser');
-applyHoverAnimation(browserElements);
-  
-
-const cursor = document.querySelector('.cursor');
-
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-})
-
-document.addEventListener('click', () => {
-    cursor.classList.add("expand");
-
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
-})
-
-document.addEventListener('click', () => {
-    cursor.classList.add('expand');
-
-    setTimeout(() => {
-        cursor.classList.remove('expand');
-    }, 500);
 });
-
-document.getElementById('custom-toggler').addEventListener('click', function () {
-    // Toggle the 'active' class on the toggler button
-    this.classList.toggle('active');
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
-  var backToTopButton = document.getElementById('back-to-top');
+  var toggleButton = document.getElementById('toggleButton');
+  var mobileLinks = document.getElementById('mobileLinks');
+  var cover = document.getElementById('cover');
+  var barOne = document.getElementById('bar-1');
+  var barTwo = document.getElementById('bar-2');
+  var barThree = document.getElementById('bar-3');
 
-  window.addEventListener('scroll', function() {
-      // Get the current scroll position
-      var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-      // Set the opacity based on the scroll position
-      backToTopButton.style.opacity = scrollPosition > 100 ? '1' : '0';
-  });
-
-  // Add a click event listener to scroll back to the top when the button is clicked
-  backToTopButton.addEventListener('click', function() {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
-  });
-});
-
-
-
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-  const question = item.querySelector('.faq-question');
-  const answer = item.nextElementSibling;
-  const icon = item.querySelector('i');
-
-  item.addEventListener('click', () => {
-    faqItems.forEach(otherItem => {
-      if (otherItem !== item) {
-        const otherAnswer = otherItem.nextElementSibling;
-        const otherIcon = otherItem.querySelector('i');
-
-        otherAnswer.classList.remove('active');
-        otherIcon.classList.remove('active');
-        otherAnswer.style.maxHeight = "0";
-      }
-    });
-
-    answer.classList.toggle('active');
-    icon.classList.toggle('active');
-    if (answer.classList.contains('active')) {
-      answer.style.maxHeight = answer.scrollHeight + "px";
+  function adjustCoverOpacity() {
+    if (window.innerWidth > 600) {
+      cover.style.display = 'none';
     } else {
-      answer.style.maxHeight = "0";
+      // Restore cover opacity to its state before above 600px script set it
+      cover.style.display = 'block'
+      
+    }
+  }
+
+  // Initial adjustment
+  adjustCoverOpacity();
+
+  // Window resize event listener
+  window.addEventListener('resize', function() {
+    adjustCoverOpacity();
+  });
+
+  toggleButton.addEventListener('click', function() {
+    if (mobileLinks.style.right === '0%') {
+      mobileLinks.style.right = '-100%';
+      cover.style.opacity = '0';
+      cover.style.display = 'none';
+      // Resetting the rotation of barOne, barTwo, and barThree
+      barOne.style.transform = 'rotate(0deg)';
+      barOne.style.transform += ' translateY(0)'; // Resetting translateY for barOne
+      barTwo.style.opacity = '1'; // Making barTwo visible again
+      barTwo.style.transform = 'translateY(0)'; // Resetting translateY for barTwo
+      barThree.style.transform = 'rotate(0deg)';
+      barThree.style.transform += ' translateY(0)'; // Resetting translateY for barThree
+    } else {
+      mobileLinks.style.right = '0%';
+      cover.style.display = 'block';
+      cover.style.opacity = '0.7';
+      // Moving the top and bottom bars to the middle before rotating barOne
+      barOne.style.transform = 'translateY(13.5px) rotate(45deg)'; // Adjusting translateY for barOne
+      barTwo.style.opacity = '0'; // Hiding barTwo
+      barThree.style.transform = 'translateY(-13.5px) rotate(-45deg)'; // Adjusting translateY for barThree
     }
   });
+
+  cover.addEventListener('click', function() {
+    mobileLinks.style.right = '-100%';
+    cover.style.opacity = '0';
+    cover.style.display = 'none';
+    // Resetting the rotation of barOne, barTwo, and barThree when cover is clicked
+    barOne.style.transform = 'rotate(0deg)';
+    barOne.style.transform += ' translateY(0)'; // Resetting translateY for barOne
+    barTwo.style.opacity = '1';
+    barTwo.style.transform = 'translateY(0)'; // Resetting translateY for barTwo
+    barThree.style.transform = 'rotate(0deg)';
+    barThree.style.transform += ' translateY(0)'; // Resetting translateY for barThree
+  });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+      once: true, // Animation will only happen once - while scrolling down
+      duration: 600, // Duration of animation in milliseconds // Delay before the animation starts in milliseconds
+      easing: 'ease-in-out',
+      offset: 100 // Easing function for the animation
+   });
 
 
-// Disable cursor during scrolling
-document.body.addEventListener('scroll', () => {
-  yourCursorElement.style.pointerEvents = 'none';
-});
 
-// Enable cursor after scrolling stops
-document.body.addEventListener('scroll', () => {
-  yourCursorElement.style.pointerEvents = 'auto';
-});
+   
+  });
+
+
+
+ 
